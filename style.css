@@ -1,0 +1,107 @@
+:root {
+    --bg-pink-gradient: linear-gradient(135deg, #ffe6f2 0%, #fff0f5 100%);
+    --text-pink: #ff69b4;
+    --font-title: 'Pacifico', cursive;
+    --font-body: 'Nunito', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-body);
+    background: var(--bg-pink-gradient);
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.hidden { display: none !important; opacity: 0; }
+
+.page-container {
+    position: absolute; width: 100%; min-height: 100vh;
+    display: flex; flex-direction: column; 
+    justify-content: center; align-items: center;
+    padding: 60px 20px;
+    gap: 40px;
+    transition: opacity 0.8s ease;
+}
+
+.card { 
+    background: white; 
+    border-radius: 40px; 
+    padding: 50px 40px;
+    text-align: center; 
+    box-shadow: 0 15px 40px rgba(255,105,180,0.15); 
+    width: 100%; 
+    max-width: 550px; 
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 30px;
+}
+
+/* STYLING INFO TANGGAL & UMUR */
+.date-age-info {
+    font-size: 1.1rem;
+    color: #ff85c1;
+    margin-top: -15px; /* Biar deket sama Happy Birthday */
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.gift-center-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.gift-wrapper { cursor: pointer; position: relative; width: 100px; height: 100px; }
+
+.gift-box-css { 
+    position: relative; width: 100px; height: 100px; 
+    background: #ff69b4; border-radius: 0 0 10px 10px;
+    animation: giftBounce 2s infinite ease-in-out;
+}
+.gift-lid { 
+    position: absolute; top: -15px; left: -5px; width: 110px; height: 25px; 
+    background: #ff85c1; border-radius: 5px; z-index: 2;
+}
+.gift-body { position: relative; width: 100%; height: 100%; }
+.gift-bow { 
+    position: absolute; top: 0; left: 40px; width: 20px; height: 100%; 
+    background: #ffd700; 
+}
+
+@keyframes giftBounce {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+.text-pink-bold { color: var(--text-pink); font-weight: 700; margin-top: 10px; }
+.decorations { font-size: 1.8rem; letter-spacing: 8px; }
+.message-box-gradient { 
+    background: linear-gradient(135deg, #ff85c1, #c77dff); 
+    color: white; padding: 25px; border-radius: 25px; font-weight: 700; width: 100%;
+}
+.wishes-text { font-size: 1.15rem; line-height: 1.8; text-align: left; color: #666; margin-top: 10px; width: 100%; }
+
+#final-scene { background: #0b1522; color: white; }
+.night-sky { position: relative; width: 100%; height: 60vh; overflow: hidden; }
+.moon { position: absolute; top: 30px; left: 50%; transform: translateX(-50%); width: 70px; height: 70px; background: #fefcd7; border-radius: 50%; box-shadow: 0 0 40px #fefcd7; z-index: 2; }
+.mountains { position: absolute; bottom: 0; width: 100%; height: 180px; display: flex; justify-content: space-between; z-index: 3; }
+.mtn { width: 60%; height: 100%; background: #1a2a3a; clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
+.mtn-left { margin-left: -15%; } .mtn-right { margin-right: -15%; }
+.lake { position: absolute; bottom: -60px; width: 140%; height: 140px; background: #0f2a44; border-radius: 50%; z-index: 4; }
+.silhouette-container { position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); z-index: 10; }
+.person-silhouette { width: 20px; height: 45px; background: #000; border-radius: 5px; }
+.received-letter { position: absolute; top: -30px; left: 0; font-size: 1.5rem; }
+.final-text { margin-top: 40px; text-align: center; opacity: 0; transition: 2s; }
+
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 500; display: flex; justify-content: center; align-items: center; opacity: 0; transition: 0.5s; }
+.star-rating { font-size: 2.8rem; display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; }
+.star { color: #ccc; cursor: pointer; }
+.star.active { color: #ffd700; }
+textarea { width: 100%; height: 100px; border-radius: 20px; border: 1px solid #eee; padding: 15px; margin-bottom: 25px; font-family: inherit; }
+#send-msg-btn { background: var(--text-pink); color: white; border: none; padding: 12px 30px; border-radius: 50px; font-weight: bold; cursor: pointer; }

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Mutia!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <div id="flashbang"></div>
+
+    <div id="front-page" class="page-container">
+        <div class="card front-card">
+            <h1 class="title-font text-pink">A Special Surprise for Mutia</h1>
+            <p class="subtitle-font">Ada sesuatu yang menunggumu di dalam...</p>
+            
+            <div class="gift-center-wrapper">
+                <div class="gift-wrapper" id="gift-trigger">
+                    <div class="gift-box-css">
+                        <div class="gift-lid"></div>
+                        <div class="gift-body">
+                            <div class="gift-bow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="click-hint">Klik kado untuk membuka ✨</p>
+        </div>
+    </div>
+
+    <div id="loading-page" class="page-container hidden">
+        <div class="card loading-card">
+            <div class="heart-loader">
+                <span>💖</span><span>💖</span><span>💖</span>
+            </div>
+            <h2 class="title-font text-pink">loading, tunggu sebentar yaa...</h2>
+            <div class="loading-icons">🎂 ✨ 🎁 💖 🎈</div>
+        </div>
+    </div>
+
+    <main id="main-page" class="page-container hidden">
+        <div class="card main-card">
+            <h1 class="title-font text-pink">Happy Birthday!</h1>
+            
+            <p class="subtitle-font date-age-info">27 Desember 2005 • 20 Years Old</p>
+            
+            <div class="decorations">🎂 ✨ 💖</div>
+            
+            <h2 class="subtitle-font text-pink-bold">To My Cutiepie, Mutia</h2>
+            
+            <div class="message-box-gradient">
+                <p>Semua Aku Dirayakan — Nadin Amizah</p>
+            </div>
+
+            <div class="wishes-text">
+                <p id="typing-text"></p>
+            </div>
+        </div>
+    </main>
+
+    <div id="interaction-modal" class="modal-overlay hidden">
+        <div class="card popup-card">
+            <h2 class="subtitle-font text-pink">Gimana perasaan Muti sekarang?</h2>
+            <div class="star-rating">
+                <span class="star" data-value="1">☆</span>
+                <span class="star" data-value="2">☆</span>
+                <span class="star" data-value="3">☆</span>
+                <span class="star" data-value="4">☆</span>
+                <span class="star" data-value="5">☆</span>
+            </div>
+            <textarea id="feeling-response" placeholder="Ceritain sedikit apa yang Muti rasain..."></textarea>
+            <button id="send-msg-btn">Kirim Surat 🕊️</button>
+        </div>
+    </div>
+
+    <div id="final-scene" class="page-container hidden">
+        <div class="night-sky">
+            <div class="moon"></div>
+            <div class="mountains">
+                <div class="mtn mtn-left"></div>
+                <div class="mtn mtn-right"></div>
+            </div>
+            <div class="lake">
+                <div class="reflection"></div>
+            </div>
+            <div class="silhouette-container">
+                <div class="person-silhouette"></div>
+                <div class="received-letter hidden">💌</div>
+            </div>
+        </div>
+        <p class="final-text title-font">Suratnya sudah aku terima, Muti. <br> Selamat beristirahat. 🌙</p>
+    </div>
+
+    <audio id="hbd-audio" loop>
+        <source src="lagu.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
